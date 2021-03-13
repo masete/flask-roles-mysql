@@ -1,4 +1,5 @@
 import datetime
+# from flask.ext.login import LoginManager
 from flask import Flask, request, render_template
 from flask_babelex import Babel
 from flask_sqlalchemy import SQLAlchemy
@@ -20,6 +21,11 @@ def create_app():
 
     # Initialize Flask-SQLAlchemy
     db = SQLAlchemy(app)
+    app.secret_key = '1357924623456789'
+
+    # login_manager = LoginManager()
+    # login_manager.init_app(app)
+    # login_manager.login_view = 'login'
 
     # Define the User data-model.
     # NB: Make sure to add flask_user UserMixin !!!
