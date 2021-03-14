@@ -5,12 +5,14 @@ Admin
 {% endblock %}
 
 {% block content %}
-<div class="row">
-    <div class="col-xs-2"></div>
-    <div class="col-xs-8">
-		{{ content }}
-        {% block form_content %}{% endblock %}
+<div style="background-image: url('Bore.jpg');">
+    <div class="row">
+        <div class="col-xs-2"></div>
+        <div class="col-xs-8">
+            {{ content }}
+            {% block form_content %}{% endblock %}
+        </div>
+        <div class="col-xs-2"></div>
     </div>
-    <div class="col-xs-2"></div>
 </div>
 {% endblock %}
