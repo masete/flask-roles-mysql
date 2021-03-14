@@ -1,11 +1,11 @@
 <html>
 <head>
   <title>Our Application</title>
-  <link rel="stylesheet" href="/static/style.css">
+  <link rel="stylesheet" href="/static/css/style.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body class="h-100 row align-items-center">
-    <div  class = "w-50 bg-success" style="background:red">
+    <div class="col" class = "w-50 bg-success" style="background:red">
     {%- with messages = get_flashed_messages(with_categories=true) -%}
     {% if messages %}
         <ul class=flashes>
