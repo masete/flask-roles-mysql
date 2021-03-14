@@ -1,13 +1,6 @@
-# Example of combining Flask-Security and Flask-Admin.
-# by Steve Saporta
-# April 15, 2014
-#
-# Uses Flask-Security to control access to the application, with "admin" and "end-user" roles.
-# Uses Flask-Admin to provide an admin UI for the lists of users and roles.
-# SQLAlchemy ORM, Flask-Mail and WTForms are used in supporting roles, as well.
-
 from flask import Flask, render_template
 from flask_sqlalchemy import SQLAlchemy
+from flask_babel import Babel
 from flask_security import current_user, login_required, RoleMixin, Security, \
     SQLAlchemyUserDatastore, UserMixin, utils
 from flask_mail import Mail
@@ -50,6 +43,16 @@ app.config['MAIL_PASSWORD'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 # Initialize Flask-Mail and SQLAlchemy
 mail = Mail(app)
 db = SQLAlchemy(app)
+
+@babel.localeselector
+def get_locale():
+    override = request.args.get('lang')
+
+    if override:
+        session['lang'] = override
+
+    rv = session.get('lang', 'en')
+    return rv
 
 # Create a table to support a many-to-many relationship between Users and Roles
 roles_users = db.Table(
