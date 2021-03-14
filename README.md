@@ -18,9 +18,7 @@ To run this app, you'll need to install:
 - Flask-Admin
 - Flask-Security
 - SQLAlchemy
-- A database system (PostgreSQL, SQLite, or another database system of your choice)
-- An empty database named "flask_example"
-
+- A database system (MySQL)
 
 
 
