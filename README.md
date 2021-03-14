@@ -21,7 +21,8 @@ To run this app, you'll need to install:
 - A database system (PostgreSQL, SQLite, or another database system of your choice)
 - An empty database named "flask_example"
 
-I personally ran it on Windows 7 with a PostgreSQL database, but you should be able to use the operating system and database system of your choice.
+
+
 
 Comments throughout main.py explain what's going on.
 
