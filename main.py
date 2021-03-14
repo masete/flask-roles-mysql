@@ -3,6 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_babelex import Babel
 from flask_security import current_user, login_required, RoleMixin, Security, \
     SQLAlchemyUserDatastore, UserMixin, utils
+from flask_bootstrap import Bootstrap
 from flask_mail import Mail
 from flask_admin import Admin
 from flask_admin.contrib import sqla
@@ -43,6 +44,8 @@ app.config['MAIL_PASSWORD'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 # Initialize Flask-Mail and SQLAlchemy
 mail = Mail(app)
 db = SQLAlchemy(app)
+
+bootstrap = Bootstrap(app)
 
 babel = Babel(app)
 
