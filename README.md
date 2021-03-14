@@ -1,12 +1,3 @@
-Example of combining Flask-Security and Flask-Admin  
-by Steve Saporta  
-April 15, 2014  
-  
-Flask-Security provides a convenient way to add authentication and authorization to a Flask web app. Flask-Admin provides a convenient way to perform CRUD operations on database tables. This example combines Flask-Security and Flask-Admin so that authorized administrators can maintain the lists of users and roles that control access to the app.
-
-You could easily generalize this app so that administrators could manage all sorts of database tables, not just users and roles.
-
-This app also provides a basic example of the use of several underlying technologies that support Flask-Security and Flask-Admin.
 
 Here are some helpful links:
 - Flask: http://flask.pocoo.org/
@@ -34,7 +25,7 @@ I personally ran it on Windows 7 with a PostgreSQL database, but you should be a
 
 Comments throughout main.py explain what's going on.
 
-Once you have the app running, you can view it in your browser (e.g. http://localhost:8080).
+Once you have the app running, you can view it in your browser (e.g. http://localhost:5000).
 
 Some things to notice:
 - When you first visit the app's home page, you'll be prompted to log in, thanks to
