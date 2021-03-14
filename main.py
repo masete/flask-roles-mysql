@@ -1,6 +1,6 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, session
 from flask_sqlalchemy import SQLAlchemy
-from flask_babel import Babel
+from flask_babelex import Babel
 from flask_security import current_user, login_required, RoleMixin, Security, \
     SQLAlchemyUserDatastore, UserMixin, utils
 from flask_mail import Mail
@@ -43,6 +43,8 @@ app.config['MAIL_PASSWORD'] = 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
 # Initialize Flask-Mail and SQLAlchemy
 mail = Mail(app)
 db = SQLAlchemy(app)
+
+babel = Babel(app)
 
 @babel.localeselector
 def get_locale():
